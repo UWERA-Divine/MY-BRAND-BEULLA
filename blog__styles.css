@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&family=Spicy+Rice&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+body {
+  min-height: 100vh;
+  width: 100%;
+  background: #ccc;
+}
+.upper__background__images {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  justify-content: space-between;
+}
+
+.image__container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15%;
+  width: 100%;
+}
+.image__container img {
+  width: 80%;
+  height: auto;
+  margin: 1rem auto;
+}
+.right__background__image {
+  position: absolute;
+  right: 0;
+  bottom: -20rem;
+}
+.text__comment__container {
+  display: flex;
+  margin-top: 10%;
+  flex-flow: column wrap;
+  padding: 0 10%;
+}
+.text__container .like-btns button {
+  padding: 10px;
+  border: none;
+  color: #000c24;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.text__comment__container .text__container {
+  /* margin: 2rem auto; */
+  display: flex;
+  flex-direction: column;
+}
+.text__comment__container .text__container h1 {
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+.text__comment__container .text__container p {
+  line-height: 170%;
+  text-align: justify;
+}
+
+.comment__container {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+}
+.comment__container form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+.comment__container form input,
+textarea {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #111;
+  padding-bottom: 6px;
+  height: 3rem;
+  width: 80%;
+  margin-bottom: 2rem;
+  background: transparent;
+}
+.comment__container form button {
+  padding: 10px 0;
+  width: 25%;
+  border-radius: 20px;
+  border: none;
+  color: #fff;
+  background-color: rgb(36, 36, 103);
+}
+.comments {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+.comments h4 {
+  margin-bottom: 1rem;
+}
+.comments .comment {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+}
+.comment .photo__name__date__container {
+  display: flex;
+  justify-content: space-between;
+}
+.comment .photo__name__date__container .photo__name__container {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-around; */
+}
+.comment .photo__name__date__container .photo__name__container img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+@media only screen and (max-width: 600px) {
+  .image__container {
+    margin-top: 30%;
+    /* padding: 10px; */
+  }
+  .image__container img {
+    width: 95%;
+  }
+  .comment__container form button {
+    width: 50%;
+  }
+}

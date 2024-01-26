@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background: #000c24;
+}
+
+.signup__container {
+  display: flex;
+  min-height: 80%;
+  min-width: 80%;
+  background-color: #fff;
+  overflow: hidden;
+  position: relative;
+  border-radius: 15px;
+}
+.signup__container .background__image {
+  position: relative;
+}
+.signup__container .background__image h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Spicy Rice", serif;
+  letter-spacing: 4px;
+  font-size: 20px;
+}
+.signup__container .background__iamge_1 {
+  position: absolute;
+  bottom: -1rem;
+  right: -8rem;
+}
+.signup__container .signup__form {
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  margin-left: 2rem;
+}
+
+.signup__container .signup__form .name {
+  display: flex;
+  justify-content: space-between;
+}
+.signup__container .signup__form form h2 {
+  text-align: center;
+  margin-top: 1rem;
+}
+.signup__container .signup__form form {
+  display: flex;
+  flex-flow: column wrap;
+  flex: 3;
+  justify-content: space-between;
+}
+.signup__container .signup__form form input {
+  height: 2.5rem;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #000;
+}
+.signup__container .signup__form form button {
+  padding: 10px 0;
+  border-radius: 15px;
+  color: #fff;
+  background-color: #222265;
+  border: 0;
+}
+.signup__container .signup__form form p a {
+  text-decoration: none;
+  color: #000c24;
+  font-weight: 600;
+}
+.signup__container .signup__form .external__login {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+}
+.signup__container .signup__form .external__login div hr {
+  display: inline-block;
+  width: 40%;
+  accent-color: #000c24;
+}
+.signup__container .signup__form .external__login div span {
+  padding: 0 10px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.brand__container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.brand__container div a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #222265;
+}
+.brand__container .google__login {
+  margin-right: 1rem;
+}
+@media only screen and (max-width: 600px) {
+  .signup__container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+  }
+  .signup__container .background__image {
+    padding-top: 3rem;
+    width: 100%;
+  }
+
+  .signup__container .signup__form form input,
+  button {
+    margin-bottom: 1.5rem;
+  }
+  .signup__container .background__image svg {
+    display: none;
+  }
+}

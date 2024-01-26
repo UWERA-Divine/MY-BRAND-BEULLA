@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <script src="https://kit.fontawesome.com/65ed364978.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="nav_styles.css">
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" id="home">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Skills</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="blog.html">Blogs</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html" id="home">SignUp</a></li>
+            <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+    </nav>
+    <script>
+        const navList = document.querySelector('nav ul')
+        const closeMenu = () => {
+            // console.log('closing menu')
+            navList.style.right = '-100%'
+        }
+        const openMenu = () => {
+            // console.log('open Menu')
+            navList.style.right = 0
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  min-height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-areas: "sidebar main";
+  grid-template-columns: 1fr 4fr;
+  grid-template-areas: auto;
+}
+.sidebar {
+  grid-area: sidebar;
+  background-color: #000c24;
+  border-bottom-right-radius: 25px;
+  min-height: 100vh;
+  color: #fff;
+  position: relative;
+  padding-left: 5%;
+}
+.sidebar .container {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+}
+
+.sidebar .container div {
+  margin-top: 4rem;
+  cursor: pointer;
+}
+.active {
+  background: #136913;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+#close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+.main {
+  grid-area: main;
+  display: flex;
+  flex-flow: column wrap;
+}
+.main .header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  /* padding-bottom: 10%; */
+  box-shadow: 3px 2px 5px #0e203bc0;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding-bottom: 10px;
+}
+.main .header div {
+  display: flex;
+  align-items: center;
+  padding-right: 5px;
+}
+.main .header div img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+.main form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+}
+.main form h2 {
+  text-align: center;
+  margin: 2rem 0;
+}
+.main form input {
+  padding-left: 10px;
+  height: 2.5rem;
+  font-size: 20px;
+  border: 1px solid #222;
+  border-radius: 10px;
+  outline: none;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.main form textarea {
+  padding: 10px 5px;
+  outline: none;
+  font-size: 16px;
+  margin-bottom: 2rem;
+}
+.main form input[type="file"] {
+  display: none;
+}
+.main form label {
+  font-size: 18px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+.main form label i {
+  font-size: 20px;
+  color: #000c24;
+}
+.main form button {
+  width: 50%;
+  padding: 10px 0;
+  color: #fff;
+  background-color: #000c24;
+  border: none;
+  border-radius: 10px;
+}
+@media only screen and (max-width: 600px) {
+  .sidebar div span {
+    display: none;
+  }
+  .sidebar div {
+    text-align: center;
+  }
+}

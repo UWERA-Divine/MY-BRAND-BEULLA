@@ -1,0 +1,289 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+
+  padding: 10px;
+}
+nav {
+  position: absolute;
+  top: 0;
+  margin-bottom: 6rem;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-areas: "sidebar mainboard userpanel";
+  grid-template-rows: auto;
+  /* height: 100%; */
+  min-height: 100vh;
+}
+
+.sidebar {
+  grid-area: sidebar;
+
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+.sidebar div .icons {
+  display: flex;
+  width: 70%;
+  align-items: center;
+  cursor: pointer;
+  /* justify-content: space-between; */
+}
+.sidebar div .icons svg {
+  margin-right: 1.5rem;
+}
+.sidebar div .active {
+  background-color: blue;
+  padding: 5px;
+  border-radius: 6px;
+}
+.sidebar .projects {
+  flex: 3;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+}
+.sidebar .parameters {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mainboard {
+  grid-area: mainboard;
+  height: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  padding: 40px 20px;
+}
+.mainboard .board__search__projects {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.mainboard .board__search__projects .search__container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.mainboard .board__search__projects .search__container form input {
+  height: 2.4rem;
+  outline: none;
+  border: none;
+  background-color: #ccc;
+  padding-left: 5px;
+  border-radius: 8px;
+}
+.mainboard .board__search__projects .search__container form input::placeholder {
+  padding-left: 20px;
+}
+.mainboard .board__search__projects .search__container form {
+  position: relative;
+}
+.mainboard .board__search__projects .search__container form button {
+  position: absolute;
+  border: none;
+  outline: none;
+  color: #999;
+  left: 0.5rem;
+  top: 0.8rem;
+  margin-right: 0.5rem;
+  background: transparent;
+}
+.mainboard .board__search__projects .projects__container {
+  margin-top: 4rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.mainboard .board__search__projects .projects__container div {
+  background-color: #ccc;
+  padding: 5% 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 25px;
+}
+.mainboard .board__search__projects .projects__container div h4 {
+  margin-bottom: 1rem;
+}
+.mainboard .board__search__projects .projects__container div h4 span {
+  display: block;
+}
+.mainboard .board__search__projects .projects__container div button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #000c24;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 4;
+}
+.mainboard .board__search__projects .projects__container div button a {
+  text-decoration: none;
+  color: #fff;
+}
+.mainboard .crud__list {
+  margin-top: 4rem;
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+}
+.mainboard .crud__list div {
+  display: flex;
+  background: #ccc;
+  padding: 1% 20px;
+  margin-bottom: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.mainboard .crud__list div img {
+  width: 80px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.mainboard .crud__list div .control__btns {
+  display: flex;
+  justify-content: space-between;
+  /* width: 20%; */
+}
+.mainboard .crud__list div .control__btns button {
+  padding: 10px 20px;
+  border: none;
+  background: #000c24;
+  margin-right: 1rem;
+  border-radius: 8px 4px 8px 8px;
+}
+.mainboard .crud__list div .control__btns button a {
+  color: #fff;
+  text-decoration: none;
+}
+.mainboard .crud__list div .control__btns button:last-child {
+  background-color: #f44336;
+}
+.userpanel {
+  grid-area: userpanel;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+}
+.userpanel .users {
+  justify-self: flex-start;
+}
+.userpanel .text__container {
+  margin-bottom: 3rem;
+}
+.userpanel div img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  right: 20px;
+  top: 2.5rem;
+  object-fit: cover;
+  cursor: pointer;
+}
+.userpanel div span {
+  position: absolute;
+  font-size: 12px;
+  right: 25px;
+  top: 5.5rem;
+  background-color: #ccc;
+  padding: 2px 3px;
+  color: #000c24;
+  z-index: 3;
+}
+.userpanel div img:nth-child(1) {
+  transform: translate(-15px, -12px);
+  z-index: 2;
+}
+.userpanel .logout {
+  align-self: center;
+  cursor: pointer;
+}
+.userpanel,
+.sidebar {
+  background-color: #000c24;
+  color: #fff;
+  height: 100%;
+  height: 100%;
+  padding: 2rem 10px;
+}
+.logout a {
+  color: #fff;
+  text-decoration: none;
+}
+@media only screen and (max-width: 950px) {
+  body {
+    padding: 0;
+  }
+
+  .sidebar div .icons span {
+    display: none;
+  }
+  .sidebar div .icons svg {
+    margin-right: 0;
+  }
+  .sidebar div .icons {
+    justify-content: center;
+  }
+  .userpanel .users img {
+    width: 25px;
+    height: 25px;
+  }
+  .userpanel .users span {
+    top: 4rem;
+  }
+  .userpanel,
+  .sidebar {
+    padding: 2rem 0;
+  }
+  .mainboard {
+    padding: 20px 0;
+  }
+  .mainboard .board__search__projects .projects__container {
+    flex-direction: column;
+  }
+  .mainboard .board__search__projects .projects__container div {
+    margin-bottom: 1rem;
+    padding: 10px;
+  }
+  .mainboard .crud__list div {
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0;
+  }
+  .mainboard .crud__list div .control__btns button {
+    margin-top: 0.5rem;
+    margin-right: 0;
+  }
+  .userpanel .text__container {
+    display: none;
+  }
+  .sidebar div .icons svg {
+    margin-right: 0;
+  }
+  .search__container form {
+    display: none;
+  }
+}
