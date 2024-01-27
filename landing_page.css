@@ -488,7 +488,7 @@ p {
   }
 }
 
-@media only screen and (max-width: 900px) and (min-width: 500px) {
+@media only screen and (max-width: 900px) and (min-width: 601px) {
   .upper-bg {
     top: -24rem;
     left: 0rem;
@@ -499,6 +499,19 @@ p {
   }
   .right-wing {
     right: 0;
+  }
+  .portfolio-container .image-container img,
+  .skills .image-container img {
+    width: 100%;
+  }
+  .progress-bar {
+    margin-top: 2rem;
+  }
+  .contact {
+    margin-top: 450%;
+  }
+  .footer {
+    margin-top: 580%;
   }
 }
 

@@ -11,3 +11,16 @@ addBlog.onclick = () => {
 // });
 
 // closing sidebar
+
+const icons = document.querySelectorAll(".icons");
+
+icons.forEach((icon, index) => {
+  icon.classList.remove("active");
+  icons[0].classList.add("active");
+  icon.onclick = function () {
+    !this.classList.contains("active")
+      ? icons.forEach((ic) => ic.classList.remove("active")) &
+        this.classList.add("active")
+      : "";
+  };
+});
