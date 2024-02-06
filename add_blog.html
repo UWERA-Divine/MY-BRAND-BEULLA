@@ -70,58 +70,48 @@
                 <span>Michella</span>
             </div>
         </div>
-        <form action="">
+        <form action="" id="add_blog">
             <h2>Add a Blog</h2>
-            <input type="text" placeholder="blog Title">
+            <input type="text" placeholder="blog Title" id="title">
             <textarea name="description" id="editors" cols="30" rows="10" placeholder="blog description"></textarea>
 
             <label for="file">Upload Photo<i class="fa-solid fa-cloud-arrow-up"></i></label>
             <input id="file" type="file" accept=".jpg, .png">
             <button type="submit">Create a Blog</button>
         </form>
+<!-- <script>
+const addBlogForm = document.querySelector('#add_blog');
 
+addBlogForm.addEventListener('submit', function(event){
+    event.preventDefault();
+    const title = document.querySelector('#title')
+const content = document.querySelector('#editors')
+const blogImage = document.querySelector('#file')
+// console.log(blogImage.files[0].name)
+console.log(blogImage.files[0])
+// console.log(URL.createObjectURL(blogImage.files[0]))
+if( !title.value || !content.value){
+    return false
+} else{
+    let blog = { title: title.value, content: content.value, imageSrc: URL.createObjectURL(blogImage.files[0])}
+    
+        localStorage.setItem('blog', JSON.stringify(blog));
+}
+})
+</script> -->
     </div>
     <script src="https://cdn.jsdelivr.net/npm/froala-editor@4.1/js/froala_editor.min.js"
         integrity="sha256-5XKNuW+VBzgUmXCB1aPeBdfCWtPxHIhkm8dJA0brECU=" crossorigin="anonymous">
+
         </script>
 
 
 
     <script src="sideBars.js">
-        // var editor = new FroalaEditor('#editors')
-
-        // const closeBtn = document.querySelector("#close");
-
-        // closeBtn.addEventListener("click", function () {
-        //     const parentEl = this.parentElement;
-        //     // console.log(parentEl);
-        //     parentEl.style.width = '50%'
-        //     parentEl.style.alignItems = 'center'
-        //     parentEl.style.paddingLeft = '0'
-        //     this.style.display = 'none'
-        //     if (document.body.clientWidth > 600) {
-        //         document.querySelectorAll('.sidebar span').forEach(span => span.style.display = 'none')
-        //         // parentEl.style.paddingLeft = '2rem'
-        //         document.querySelectorAll('.sidebar .container div').forEach(div => {
-        //             div.style.display = 'flex'
-        //             div.style.justifyContent = 'center'
-        //         })
-        //     }
-        // });
-        // document.querySelector('.logout').onclick = () => window.location.href = 'index.html'
-        // const icons = document.querySelectorAll(".icons");
-
-        // icons.forEach((icon, index) => {
-        //     icon.classList.remove("active");
-        //     icons[0].classList.add("active");
-        //     icon.onclick = function () {
-        //         !this.classList.contains("active")
-        //             ? icons.forEach((ic) => ic.classList.remove("active")) &
-        //             this.classList.add("active")
-        //             : "";
-        //     };
-        // });
+        
     </script>
+    <script src="handleBlogs.js"></script>
+
 </body>
 
 </html>

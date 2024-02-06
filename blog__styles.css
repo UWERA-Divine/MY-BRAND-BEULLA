@@ -36,7 +36,7 @@ body {
   right: 0;
   bottom: -20rem;
 }
-.text__comment__container {
+.text__container {
   display: flex;
   margin-top: 10%;
   flex-flow: column wrap;
@@ -49,25 +49,27 @@ body {
   font-weight: 500;
   border-radius: 5px;
   cursor: pointer;
+  margin-top: 1rem;
 }
-.text__comment__container .text__container {
-  /* margin: 2rem auto; */
+
+/* .text__comment__container .text__container {
   display: flex;
   flex-direction: column;
-}
-.text__comment__container .text__container h1 {
+} */
+/* .text__comment__container .text__container h1 {
   margin-bottom: 2rem;
   font-weight: 600;
 }
 .text__comment__container .text__container p {
   line-height: 170%;
   text-align: justify;
-}
+} */
 
 .comment__container {
   display: flex;
   flex-flow: column wrap;
   width: 100%;
+  padding: 0 10%;
 }
 .comment__container form {
   display: flex;

@@ -329,7 +329,10 @@ span {
   margin-top: 2rem;
 }
 /* contacts */
-
+.error {
+  display: none;
+  color: #f44336;
+}
 .contact {
   position: absolute;
   margin-top: 350%;
@@ -367,10 +370,12 @@ span {
   padding-left: 5px;
   outline: none;
   border: 1px solid #000c24;
+  color: #000c24;
 }
 .contact-box form textarea {
   outline: none;
   border: 1px solid #000c24;
+  color: #000c24;
 }
 .contact-box form button {
   width: 75%;
