@@ -282,8 +282,8 @@
             const deleteId = parseInt(parentEl.children[0].textContent) - 1;
             let updatedBlogs = blogs.splice(deleteId, 1);
             localStorage.setItem("blogs", JSON.stringify(updatedBlogs));
-
-            console.log(deleteId);
+            parentEl.remove();
+            // console.log(deleteId);
           }
         };
       });
