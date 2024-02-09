@@ -178,52 +178,18 @@
       </div>
     </div>
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        if (localStorage.getItem("blog")) {
-          let blog = JSON.parse(localStorage.getItem("blog"));
-          //   console.log(blog.imageSrc);
-          //   console.log(blog);
-          const blogsContainer = document.querySelector(".main-blog-container");
-          const newBlogdiv = document.createElement("div");
-          newBlogdiv.innerHTML = `<div class="image__container">
-          <img src="${blog.imageSrc}" alt="Blog Image" id="blogImage" />
-        </div>
-        <div class="right__background__image">
-          <svg
-            width="120"
-            height="213"
-            viewBox="0 0 270 513"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <ellipse
-              cx="112"
-              cy="254.5"
-              rx="112"
-              ry="109.5"
-              fill="#000C24"
-              fill-opacity="0.3"
-            />
-            <ellipse cx="224" cy="403.5" rx="112" ry="109.5" fill="#D9D9D9" />
-            <ellipse cx="224" cy="109.5" rx="112" ry="109.5" fill="#D9D9D9" />
-          </svg>
-        </div>
-        <div class="text__container">
-          <h1 id="title">${blog.title}</h1>
-          <p id="content">
-        ${blog.content}
-          </p>
-          <p>
-            One of JavaScript's key strengths lies in its ability to manipulate
-            the Document Object Model (DOM), allowing developers to dynamically
-            update and modify webpage content.
-          </p>
-          <div class="like-btns">
-            <button>21 Likes 👍</button>
-          </div>`;
-          blogsContainer.appendChild(newBlogdiv);
-        }
-      });
+      const image = document.querySelector("#blogImage");
+      const title = document.querySelector("#title");
+      const content = document.querySelector("#content");
+      const targetId = window.location.href.split("?")[1];
+      console.log(targetId);
+      let blogs = JSON.parse(localStorage.getItem("blogs"));
+
+      let targetBlog = blogs.filter((blog) => blog.id.toString() === targetId);
+      console.log(blogs[0].id.toString());
+      image.src = targetBlog[0].imageSrc;
+      title.textContent = targetBlog[0].title;
+      content.innerHTML = targetBlog[0].content;
     </script>
   </body>
 </html>

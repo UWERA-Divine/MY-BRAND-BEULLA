@@ -10,6 +10,7 @@ form.addEventListener("submit", (e) => {
     title: title.value,
     content: content.value,
     imageSrc: URL.createObjectURL(imageFile.files[0]),
+    id: Date.now().toString(),
   };
   blogs.push(blog);
   localStorage.setItem("blogs", JSON.stringify(blogs));

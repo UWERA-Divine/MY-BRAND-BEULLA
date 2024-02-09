@@ -16,7 +16,7 @@ if (blogs.length > 0) {
     <div class="like__icons">
       <div><i class="fa-solid fa-heart"></i> &nbsp; <span>4</span></div>
 
-      <a href="blog.html">Read More...</a>
+      <a class="blog_url" href="blog.html?${blog.id}">Read More...</a>
     </div>
   </div>`;
     mainBlogContainer.appendChild(blogContainer);
