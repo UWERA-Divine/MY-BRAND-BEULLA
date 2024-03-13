@@ -11,7 +11,10 @@
       src="https://kit.fontawesome.com/65ed364978.js"
       crossorigin="anonymous"
     ></script>
-    <script src="./javascript/blogsection.js"></script>
+    <script>
+      const url = "+https://my-brand-be-2-bj1r.onrender.com/api/blogs"
+    </script>
+  </head>
     <script src="script.js" defer></script>
     
   </head>
@@ -501,14 +504,14 @@
           </div>
           <form id="contact-form">
             <h1>Get in Touch</h1>
-            <input type="text" placeholder="Name" id="name" required />
+            <input type="text" placeholder="Name" id="nameInput" required />
             <span class="error"></span>
-            <input type="text" placeholder="Email" id="email" required />
+            <input type="text" placeholder="Email" id="emailInput" required />
             <span class="error"></span>
             <textarea
               rows="10"
               placeholder="Message"
-              id="message"
+              id="messageInput"></textarea
               required
             ></textarea>
             <span class="error"></span>
@@ -517,63 +520,63 @@
           </form>
           <script>
             const contactForm = document.querySelector("#contact-form");
-            const name = document.querySelector("#name");
+            // const name = document.querySelector("#name");
             const errorMessages = document.querySelectorAll(".error");
             const email = document.querySelector("#email");
             const message = document.querySelector("#message");
             const emailValidator = /^[\w.%+-]+@[\w.-]+\.[a-zA-Z]{2,}$/;
-            const validateName = () => {
-              name.addEventListener("input", function () {
-                if (name.value.trim().length < 6) {
-                  name.style.border = "1px red solid";
-                  errorMessages[0].textContent = "Please provide a valid name";
-                  errorMessages[0].style.display = "block";
-                  return false;
-                } else {
-                  errorMessages[0].style.display = "none";
-                  this.style.border = "1px green solid";
-                  return true;
-                }
-              });
-            };
-            const validateEmail = () => {
-              email.addEventListener("input", function () {
-                if (!emailValidator.test(email.value)) {
-                  email.style.border = "1px red solid";
-                  errorMessages[1].textContent = "Please provide a valid email";
-                  errorMessages[1].style.display = "block";
-                  return false;
-                } else {
-                  errorMessages[1].style.display = "none";
-                  this.style.border = "1px green solid";
-                  return true;
-                }
-              });
-            };
-            const validateMessage = () => {
-              message.addEventListener("input", function () {
-                if (message.value.trim().length < 10) {
-                  message.style.border = "1px red solid";
-                  errorMessages[2].textContent =
-                    "Please provide a valid message";
-                  errorMessages[2].style.display = "block";
-                  return false;
-                } else {
-                  errorMessages[2].style.display = "none";
-                  this.style.border = "1px green solid";
-                  return true;
-                }
-              });
-            };
-            validateName();
-            validateEmail();
-            validateMessage();
-            contactForm.addEventListener("submit", function (e) {
-              e.preventDefault();
-              validateName();
-              validateEmail();
-              validateMessage();
-            });
+            // const validateName = () => {
+            //   name.addEventListener("input", function () {
+            //     if (name.value.trim().length < 6) {
+            //       name.style.border = "1px red solid";
+            //       errorMessages[0].textContent = "Please provide a valid name";
+            //       errorMessages[0].style.display = "block";
+            //       return false;
+            //     } else {
+            //       errorMessages[0].style.display = "none";
+            //       this.style.border = "1px green solid";
+            //       return true;
+            //     }
+              // });
+            // };
+            // const validateEmail = () => {
+            //   email.addEventListener("input", function () {
+            //     if (!emailValidator.test(email.value)) {
+            //       email.style.border = "1px red solid";
+            //       errorMessages[1].textContent = "Please provide a valid email";
+            //       errorMessages[1].style.display = "block";
+            //       return false;
+            //     } else {
+            //       errorMessages[1].style.display = "none";
+            //       this.style.border = "1px green solid";
+            //       return true;
+            //     }
+            //   });
+            // };
+            // const validateMessage = () => {
+            //   message.addEventListener("input", function () {
+            //     if (message.value.trim().length < 10) {
+            //       message.style.border = "1px red solid";
+            //       errorMessages[2].textContent =
+            //         "Please provide a valid message";
+            //       errorMessages[2].style.display = "block";
+            //       return false;
+            //     } else {
+            //       errorMessages[2].style.display = "none";
+            //       this.style.border = "1px green solid";
+            //       return true;
+            //     }
+            //   });
+            // };
+            // // validateName();
+            // validateEmail();
+            // validateMessage();
+            // contactForm.addEventListener("submit", function (e) {
+            //   e.preventDefault();
+            //   validateName();
+            //   validateEmail();
+            //   validateMessage();
+            // });
           </script>
         </div>
       </div>
@@ -650,8 +653,9 @@
         <p>All Right reserved &copy; Divine Beulla 2024 💖</p>
       </div>
     </footer>
-
-    <script src="addBlog.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./javascript/message.js"></script>
+    <script src="handleBlogs.js"></script>
 
   </body>
 </html>

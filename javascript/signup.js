@@ -1,6 +1,7 @@
 const form = document.getElementById('form')
 var firstname = document.getElementById('n1')
 var lastname = document.getElementById('n2')
+// const locate = document.getElementById('name_3')
 const email = document.getElementById('input1')
 const password = document.getElementById('input2')
 const confirm = document.getElementById('submit')
@@ -32,16 +33,17 @@ form.addEventListener('submit', e =>{
     }
 
 function validateInputs(){
-    const fullName = username.value.trim();
+    const surName = firstname.value.trim();
+    const secondname = lastname.value.trim();
     const inEmail = email.value.trim();
-    const oneLocate = locate.value.trim();
+    // const oneLocate = locate.value.trim();
     const firstPass = password.value.trim();
     const secPass = confirm.value.trim();
 
-    if(fullName === ''){
-        verError(username, 'Name field is required!');
-    } else if(fullName < 8){
-        verError(username, 'username must not be less than 8 character')
+    if(surName === ''){
+        verError(firstname, 'Name field is required!');
+    } else if(surName < 4){
+        verError(firstname, 'username must not be less than 4 character')
     }
     else{
         // verPass(userNam);
@@ -52,11 +54,11 @@ function validateInputs(){
         else if(!checkEmail(inEmail)){
             verError(email, 'Enter the valid email!');
         }
-        else{
-            // verPass(email)
-            if(oneLocate === ''){
-                verError(locate, 'Location field is required!');
-            }
+        // else{
+        //     // verPass(email)
+        //     if(oneLocate === ''){
+        //         verError(locate, 'Location field is required!');
+        //     }
             else{
                 // verPass(locate);
                 if(firstPass === ''){
@@ -85,7 +87,7 @@ function validateInputs(){
         // Function to perform login
 function loginUser(body) {
     // Assuming you're using fetch for API calls
-    fetch('http://localhost:3000/api/users/signup', {
+    fetch('https://my-brand-be-2-bj1r.onrender.com/api/users/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -142,4 +144,3 @@ function loginUser(body) {
 
     
 
-}

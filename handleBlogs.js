@@ -1,22 +1,22 @@
-let blogs = JSON.parse(localStorage.getItem("blogs")) || [];
-const title = document.querySelector("#title");
-const content = document.querySelector("#editors");
-const imageFile = document.querySelector("#file");
-const form = document.querySelector("#add_blog");
+// let blogs = JSON.parse(localStorage.getItem("blogs")) || [];
+// const title = document.querySelector("#title");
+// const content = document.querySelector("#editors");
+// const imageFile = document.querySelector("#file");
+// const form = document.querySelector("#add_blog");
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  let blog = {
-    title: title.value,
-    content: content.value,
-    imageSrc: URL.createObjectURL(imageFile.files[0]),
-  };
-  blogs.push(blog);
-  localStorage.setItem("blogs", JSON.stringify(blogs));
-  title.value = "";
-  content.value = "";
-  console.log(blogs);
-});
+// form.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   let blog = {
+//     title: title.value,
+//     content: content.value,
+//     imageSrc: URL.createObjectURL(imageFile.files[0]),
+//   };
+//   blogs.push(blog);
+//   localStorage.setItem("blogs", JSON.stringify(blogs));
+//   title.value = "";
+//   content.value = "";
+//   console.log(blogs);
+// });
 
 /*
        <div class="blog__card">

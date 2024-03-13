@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 const blogContainer=document.getElementById("blogca");
 const  getAll = async()=>{
-  await  fetch('http://localhost:3000/api/blogs')
+  await  fetch(url+"/api/blogs")
 .then(res=>res.json())
 .then(result=>{
   console.log(result)

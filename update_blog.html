@@ -84,14 +84,14 @@
                 <span>Michella</span>
             </div>
         </div>
-        <form action="">
+        <form action="" id="updateBlogForm">
             <h2>Update a Blog</h2>
-            <input type="text" placeholder="blog Title">
-            <textarea name="description" id="editors" cols="30" rows="10" placeholder="blog description"></textarea>
+            <input type="text" placeholder="blog Title" id="titleUpdate">
+            <textarea name="description" id="editors" cols="30" rows="10" placeholder="blog description" id="content"></textarea>
 
             <label for="file">Upload Photo<i class="fa-solid fa-cloud-arrow-up"></i></label>
-            <input id="file" type="file" accept=".jpg, .png">
-            <button type="submit">Update Blog</button>
+            <input id="file" type="file" accept=".jpg, .jpeg, .png" id="image-file">
+            <button type="submit" >Update Blog</button>
         </form>
 
     </div>
@@ -100,6 +100,7 @@
         </script>
     <script src="sideBars.js">
     </script>
+    <script src="./javascript/updateBlogs.js"></script>
 </body>
 
 </html>

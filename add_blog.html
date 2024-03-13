@@ -72,11 +72,11 @@
         </div>
         <form action="" id="add_blog">
             <h2>Add a Blog</h2>
-            <input type="text" placeholder="blog Title" id="title">
-            <textarea name="description" id="editors" cols="30" rows="10" placeholder="blog description"></textarea>
+            <input type="text" placeholder="blog Title" id="title" name="title">
+            <textarea name="content" id="editors" cols="30" rows="10" placeholder="blog description"></textarea>
 
             <label for="file">Upload Photo<i class="fa-solid fa-cloud-arrow-up"></i></label>
-            <input id="file" type="file" accept=".jpg, .png">
+            <input id="file" type="file" accept="image/jpeg, image/png, image/jpg" name="imageUrl">
             <button type="submit">Create a Blog</button>
         </form>
 <!-- <script>
@@ -100,16 +100,13 @@ if( !title.value || !content.value){
 })
 </script> -->
     </div>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/froala-editor@4.1/js/froala_editor.min.js"
         integrity="sha256-5XKNuW+VBzgUmXCB1aPeBdfCWtPxHIhkm8dJA0brECU=" crossorigin="anonymous">
-
-        </script>
-
-
-
-    <script src="sideBars.js">
-        
     </script>
+    <script src="sideBars.js">
+    </script>
+    <script src="./javascript/createBlog.js"></script>
     <script src="handleBlogs.js"></script>
 
 </body>

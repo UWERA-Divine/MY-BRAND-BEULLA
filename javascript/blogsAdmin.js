@@ -19,9 +19,9 @@ fetch (`https://my-brand-be-2-bj1r.onrender.com/api/blogs`)
     })
     blogs.innerHTML = list;
 })
-// .catch(err=>{
-//     console.log(err)
-// })
+.catch(err=>{
+    console.log(err)
+})
 blogs.addEventListener('click', (e)=>{
     let target = e.target
     //console.log("target", targeted)
