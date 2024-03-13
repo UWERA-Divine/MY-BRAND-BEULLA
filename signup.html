@@ -47,16 +47,16 @@
             <h2>WELCOME TO OUR SITE</h2>
         </div>
         <div class="signup__form">
-            <form action="">
+            <form action="" id="form">
                 <h2><u>sign Up</u></h2>
                 <p>Create account</p>
                 <div class="name">
-                    <input type="text" placeholder="First Name">
-                    <input type="text" placeholder="Last Name">
+                    <input type="text" placeholder="First Name" id="n1">
+                    <input type="text" placeholder="Last Name" id="n2">
                 </div>
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
-                <button type="submit">Create Account</button>
+                <input type="email" placeholder="Email" id="input1">
+                <input type="password" placeholder="Password" id="input2">
+                <button type="submit"  id="submit" onclick="validateInputs()">Create Account</button>
                 <p>Already have an account? <a href="login.html">Login</a></p>
             </form>
             <div class="external__login">
@@ -92,7 +92,7 @@
 
         </div>
     </div>
-
+    <script src="./javascript/signup.js"></script>
 
 </body>
 

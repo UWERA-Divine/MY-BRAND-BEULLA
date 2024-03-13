@@ -198,29 +198,7 @@
               <button><a href="#">Delete</a></button>
             </div>
             <img src="./images/user2.png" alt="#" />
-          </div>
-          <div>
-            <span>02</span>
-            <h4>blog name</h4>
-            <div class="control__btns">
-              <button class="update">
-                <a href="update_blog.html">Edit</a>
-              </button>
-              <button><a href="#">Delete</a></button>
-            </div>
-            <img src="./images/user2.png" alt="#" />
-          </div>
-          <div>
-            <span>03</span>
-            <h4>blog name</h4>
-            <div class="control__btns">
-              <button class="update">
-                <a href="update_blog.html">Edit</a>
-              </button>
-              <button><a href="#">Delete</a></button>
-            </div>
-            <img src="./images/user2.png" alt="#" />
-          </div> -->
+          </div>  -->
         </div>
       </div>
       <div class="userpanel">
@@ -253,52 +231,9 @@
         </div>
       </div>
     </div>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="navigationControl.js"></script>
-    <script>
-      let blogs = JSON.parse(localStorage.getItem("blogs"));
-      const container = document.querySelector(".crud__list");
-      blogs.forEach(({ title, imageSrc }, index) => {
-        const div = document.createElement("div");
-        div.classList.add("blog");
-        div.innerHTML = `<span>0${index + 1}</span>
-                    <h4>${title}</h4>
-                    <div class="control__btns">
-                        <button class="update"><a href="update_blog.html">Edit</a></button>
-                        <button id="delete"><a href="#">Delete</a></button>
-                    </div>
-                    <img src="${imageSrc}" alt="#">`;
-        container.appendChild(div);
-      });
-      const blogList = document.querySelectorAll(".blog");
-      //   console.log(blogList.);
-      blogList.forEach(function (blogDiv) {
-        let controlBtn = blogDiv.children[2];
-        controlBtn.onclick = function (e) {
-          //   console.log(e.target);
-          const targetBtn = e.target;
-          if ((targetBtn.textConent = "Delete")) {
-            // console.log("deleted");
-            const parentEl = controlBtn.parentElement;
-            const deleteId = parseInt(parentEl.children[0].textContent) - 1;
-            let updatedBlogs = blogs.splice(deleteId, 1);
-            localStorage.setItem("blogs", JSON.stringify(updatedBlogs));
-            parentEl.remove();
-            // console.log(deleteId);
-          }
-        };
-      });
-
-      /*
- <div>
-                    <span>01</span>
-                    <h4>blog name</h4>
-                    <div class="control__btns">
-                        <button class="update"><a href="update_blog.html">Edit</a></button>
-                        <button><a href="#">Delete</a></button>
-                    </div>
-                    <img src="./images/user2.png" alt="#">
-                </div>
-                */
-    </script>
+    <script src="./javascript/blogsAdmin.js"></script>    
+    
   </body>
 </html>
