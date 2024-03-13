@@ -113,15 +113,16 @@
         </defs>
       </svg>
 
-      <form action="">
+      <form action="" id="form">
         <h2>Login</h2>
-        <input type="text" placeholder="username" />
-        <input type="password" placeholder="password" />
+        <input type="email" placeholder="email" name="email" id="input1"/>
+        <input type="password" placeholder="password" password="password" name= "password" id="input2"/>
         <span><a href="#">forget password?</a></span>
-        <button type="submit" id="submit__btn">LOGIN</button>
+        <button type="submit" id="submit__btn" onclick="validateInputs()">LOGIN</button>
+
       </form>
     </div>
-    <script>
+    <!-- <script>
       const btn = document.querySelector("#submit__btn");
       const form = document.querySelector("form");
       form.onsubmit = (e) => {
@@ -183,6 +184,7 @@
         validatePassword();
         validateMessage();
       });
-    </script>
+    </script> -->
+    <script src="./javascript/login.js"></script>
   </body>
 </html>
